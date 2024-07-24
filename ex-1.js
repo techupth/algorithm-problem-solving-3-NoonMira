@@ -1,5 +1,7 @@
 function sortCustomerName(customers) {
-  // เริ่มเขียนโค้ดตรงนี้จ้า
+  return customers.sort()
 }
+customers = ["Somchai", "Arthit", "Suchada", "Napasorn", "Pimchanok"]
+console.log(sortCustomerName(customers))
 
-// ตอบคำถามตรงนี้จ้า
+// o(n^2)
