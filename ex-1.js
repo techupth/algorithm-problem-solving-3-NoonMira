@@ -1,5 +1,21 @@
 function sortCustomerName(customers) {
-  // เริ่มเขียนโค้ดตรงนี้จ้า
+  let lenght = customers.length
+  let swap = true
+  while (swap) {
+    swap = false
+    for(let i = 0 ; i<lenght-1;i++) {
+      if (customers[i]>customers[i+1]) {
+        let temp = customers[i]
+        customers[i] = customers[i+1]
+        customers[i+1] = temp
+        swap =true
+      }
+    }
+    
+  }
+  return customers
 }
+customers = ["Somchai", "Arthit", "Suchada", "Napasorn", "Pimchanok"]
+console.log(sortCustomerName(customers))
 
-// ตอบคำถามตรงนี้จ้า
+// o(n^2)
