@@ -1,6 +1,20 @@
 function sortStudentsByScore(students) {
-  return students.sort((min, max) => max.score - min.score);
-  
+  let length = students.length
+  let swap = true
+  while (swap) {
+    swap = false
+    for(let i = 0; i<length-1 ; i++) {
+      if (students[i].score>students[i+1].score) {
+        let temp = students[i]
+        students[i] = students[i+1]
+        students[i+1] = temp
+        swap = true
+      }
+    }
+    
+    
+  }
+  return students
 }
 let students = [
   { id: "S001", name: "Anan", score: 85 },
